@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+        width: 50px;
+        height: 50px;
+        top: 50%;
+        left: 50%;
+        border-radius: 50%;
+        background-color: #226fb7;
+        position: relative;
+        transform: translate(-50%, -50%);
+      }
+      div:hover {
+        animation: example 1500ms ease-out infinite;
+        background-color: transparent;
+      }
+      @keyframes example {
+        50% {
+          transform: translate(-50%, -50%) scale(0.5, 0.5);
+          background-color: #226fb7;
+          display: block;
+        }
+        99% {
+          transform: translate(-50%, -50%) scale(1, 1);
+          display: block;
+          width: 150px;
+          height: 150px;
+        }
+        100% {
+          transform: translate(-100%, -100%) scale(0, 0);
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Animation</h1>
+
+    <p>
+      The animation-iteration-count property can be set to infinite to let the
+      animation run for ever:
+    </p>
+
+    <div></div>
+  </body>
+</html>
